@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Encrypted File Transfer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <main class="card">
+      <h1>Encrypted File Transfer</h1>
+      <p class="muted">Files are encrypted in your browser before upload. The server stores ciphertext only.</p>
+
+      <section>
+        <h2>Upload</h2>
+        <label>
+          File
+          <input id="file" type="file" />
+        </label>
+        <label>
+          Password
+          <input id="uploadPassword" type="password" placeholder="Enter password" />
+        </label>
+        <button id="uploadButton">Encrypt and upload</button>
+        <progress id="progress" max="100" value="0"></progress>
+        <p id="uploadStatus" class="status"></p>
+      </section>
+
+      <section>
+        <h2>Download</h2>
+        <label>
+          File ID
+          <input id="fileId" placeholder="32-character file ID" />
+        </label>
+        <label>
+          Password
+          <input id="downloadPassword" type="password" placeholder="Enter password" />
+        </label>
+        <button id="downloadButton">Download and decrypt</button>
+        <p id="downloadStatus" class="status"></p>
+      </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>

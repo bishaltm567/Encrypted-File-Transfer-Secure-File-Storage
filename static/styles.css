@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  background: #eef2ff;
+  font-family: system-ui, sans-serif;
+  color: #1f2937;
+}
+
+.card {
+  max-width: 720px;
+  margin: 3rem auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+  padding: 2rem;
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+section {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-top: 0.9rem;
+  font-weight: 600;
+}
+
+input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 0.45rem;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font: inherit;
+}
+
+button {
+  margin-top: 1rem;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  background: #2563eb;
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+progress {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.status {
+  min-height: 1.5rem;
+  color: #374151;
+  margin-top: 0.75rem;
+}
+
+.muted {
+  color: #4b5563;
+}
