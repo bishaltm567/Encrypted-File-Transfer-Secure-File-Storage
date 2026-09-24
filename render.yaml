@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: encrypted-file-transfer
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: STORAGE_HMAC_KEY
+        generateValue: true
+      - key: STORAGE_DIR
+        value: /var/data/storage
+    disk:
+      name: encrypted-storage
+      mountPath: /var/data
+      sizeGB: 1
